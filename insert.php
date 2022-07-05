@@ -27,12 +27,21 @@
     // echo $r_email;
     // echo $r_pass;
 
-    $username_pattern = "/^[a-zA-Z]([0-9a-zA-Z ]){2,30}$/";
+    $username_pattern = "/^[a-zA-Z]([0-9a-zA-Z .]){3,40}$/";
     $mobile_pattern = "/^([0-9]){11}$/";
     $email_pattern = "/^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/";
     $pass_pattern = "/^[a-zA-Z0-9!@#$%^&*]{6,16}$/";
 
-    if(!preg_match($username_pattern,$r_username)) {
+
+    $duplicate_mobile = mysqli_query($conn, "SELECT * FROM `register` WHERE mobile='$r_mobile'");
+
+    if(mysqli_num_rows($duplicate_mobile) > 0){
+
+        echo "<script>alert('The Mobile Number is already taken!! Please try again with another number')</script>";
+        echo "<script>location.href = 'registration.php'</script>";
+    }
+
+    else if(!preg_match($username_pattern,$r_username)) {
 
         echo "<script>alert('Invalid User')</script>";
         echo "<script>location.href = 'registration.php'</script>";

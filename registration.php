@@ -73,7 +73,7 @@ background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244
                 <label class="form-label" for="name">User Name</label>
                   <input type="text" name="r_username" id="name" class="form-control form-control-lg" placeholder="Username"/>
                   <small id="namevalid" class="form-text text-muted invalid-feedback">
-                  You just use character. Also your name lenght have to 3-20
+                  You just use character. Also your name lenght have to 3-40
                       </small>
             </div>
 

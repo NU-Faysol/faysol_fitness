@@ -13,7 +13,7 @@
 
     }
     else{
-        echo "<script>alert('Connected Successful')</script>";
+        //echo "<script>alert('Connected Successful')</script>";
     }
     
 

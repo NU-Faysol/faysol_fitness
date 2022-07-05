@@ -21,7 +21,7 @@ $('#success').hide();
 name.addEventListener('blur', ()=>{
     console.log("name is blurred");
     // Validate name here
-    let regex = /^[a-zA-Z]([0-9a-zA-Z ]){2,30}$/;
+    let regex = /^[a-zA-Z]([0-9a-zA-Z .]){3,40}$/;
     let str = name.value;
     console.log(regex, str);
     if(regex.test(str)){
