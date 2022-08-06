@@ -104,8 +104,9 @@ confirmpassword.addEventListener('blur', ()=>{
     
 
     let str = password.value;
+    let valueOfConfirmPassword = confirmpassword.value;
 
-    if(str.match(confirmpassword.value)){
+    if(str.match(valueOfConfirmPassword)){
         console.log('Your password is valid');
         confirmpassword.classList.remove('is-invalid');
         validcpass = true;

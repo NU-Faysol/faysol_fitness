@@ -12,7 +12,7 @@ if(isset($_POST['login'])){
 
                 session_start();
                 $_SESSION['username'] = $l_username;
-                echo "<script>location.href = 'index.html'</script>"; 
+                echo "<script>location.href = 'index.php'</script>"; 
             }
             else{
                 echo "<script>alert('Username and Password are not matched')</script>";
@@ -23,5 +23,7 @@ if(isset($_POST['login'])){
 
         echo "<script>location.href = 'login.php'</script>";
     }
+
+    
 
 ?>

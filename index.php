@@ -1,3 +1,22 @@
+
+        <?php 
+
+        session_start();
+
+            if(isset($_SESSION['username']) AND file_exists('index.php')) {
+
+                $showname = $_SESSION['username'];
+
+                echo "<script>alert(' Hello $showname ')</script>";
+        
+            }
+            else{
+                echo "<script>alert('Do not access from URL!!')</script>";
+                echo "<script>location.href = 'login.php'</script>";
+            }
+
+        ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,20 +36,9 @@
 
 <body class='overflow-x-hidden'>
     <div class="Container mx-auto">
-        <header>
-            <nav class="Flex justify-between">
-                <div class="logo font-bold Flex items-center text-blue">Faysol Fitness</div>
-                <ul class="navbar Flex items-center">
-                    <li><a class="anchor" href="index.html"> Home </a></li>
-                    <li><a class="anchor" href="about.html"> About </a></li>
-                    <li><a class="anchor" href="services.html"> Services </a></li>
-                    <li><a class="anchor" href="contractUs.html"> Contact Us </a></li>
-                    <li><a class="anchor" href="registration.php"> Registration </a></li>
-                    <li><a class="anchor Btn" href="login.php">Login</a></li>
-                </ul>
-            </nav>
-            <hr>
-        </header>
+
+                                <?php include 'E:\xampp\htdocs\faysol_fitness\components/header.php'; ?>
+
         <main class="min-h-screen">
             <section class="section1">
                 <div class="Flex">
@@ -39,10 +47,11 @@
                             <img class="dumbellimg" src="dumbell.png" alt="">
                         </div>
                         <h1 class="MY-1 text-center">The best fitness Gym in the town is here</h1>
-                        <p class=" text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-                            error corporis fugit dolore adipisci aperiam omnis nisi dolores hic eius in ex id iure, ea
-                            sunt asperiores et voluptatibus dignissimos autem maiores molestias dolor rem delectus
-                            quidem! Inventore.</p>
+                   
+                        <p class=" text-center">We believe exercise is a science and bodybuilding is an art ,, science and art both need theoretical knowledge,, so beginners session on going and our expert sharing knowledge about rack and Re racking weight , compound exercises, differences between powerlifter and. Bodybuilder , ideal weight and how to do proper benchpress, importance of a spotter.</p>
+                        
+                        <h3 style="text-align: center; line-height: 40px;">Admission going On</h3>
+                        <h4 style="text-align: center; line-height: 40px;">Info: +8801712329913</h4>
 
                             <!-- Display the countdown timer in an element -->
                             <p class="deal text-center">The deal ends in <span id="demo"></span></p>
@@ -59,15 +68,12 @@
             <hr>
             <section class="section2">
                 <h1 class="text-center MY-2">Pricing</h1>
-                <p class="MY-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi debitis provident
-                    suscipit temporibus modi voluptatem. Assumenda aspernatur ad nihil quasi expedita eligendi atque?
-                    Dolorum eum deserunt dicta iste beatae commodi, doloribus expedita hic recusandae, tempora illum
-                    consequuntur? Necessitatibus voluptate animi repellendus reiciendis!</p>
+                <p class="MY-2">If you see many Gym center offered so expensive rate but in FaysolFitness you can get many facilites in cheap price. we have many plans- </p>
                 <div class="boxes Flex justify-center">
                     <div class="box">
                         <h2>Free</h2>
                         <ul>
-                            <li class="highlighted">₹0/month</li>
+                            <li class="highlighted">৳0/month</li>
                             <li>0 users included</li>
                             <li>2 GB of storage</li>
                             <li>Email support</li>
@@ -78,9 +84,9 @@
                     <div class="box">
                         <h2>Pro</h2>
                         <ul>
-                            <li class="highlighted">₹150/month</li>
+                            <li class="highlighted">৳500/month</li>
                             <li>0 users included</li>
-                            <li>2 GB of storage</li>
+                            <li>10 GB of storage</li>
                             <li>Email support</li>
                             <li>Help center access</li>
                             <li><button class="Btn">Signup Now</button></li>
@@ -89,9 +95,9 @@
                     <div class="box">
                         <h2>Enterprise</h2>
                         <ul>
-                            <li class="highlighted">₹500/month</li>
+                            <li class="highlighted">৳1000/month</li>
                             <li>0 users included</li>
-                            <li>2 GB of storage</li>
+                            <li>40 GB of storage</li>
                             <li>Email support</li>
                             <li>Help center access</li>
                             <li><button class="Btn">Signup Now</button></li>
@@ -115,42 +121,42 @@
                       <tbody>
                         <tr>
                           <th scope="row" class="text-start">Public</th>
-                          <td>Yes</svg></td>
-                          <td>Yes</svg></td>
-                          <td>Yes</svg></td>
+                          <td>Yes</td>
+                          <td>Yes</td>
+                          <td>Yes</td>
                         </tr>
                         <tr>
                           <th scope="row" class="text-start">Private</th>
                           <td>-</td>
-                          <td>Yes</svg></td>
-                          <td>Yes</svg></td>
+                          <td>Yes</td>
+                          <td>Yes</td>
                         </tr>
                       </tbody>
               
                       <tbody>
                         <tr>
                           <th scope="row" class="text-start">Permissions</th>
-                          <td>Yes</svg></td>
-                          <td>Yes</svg></td>
-                          <td>Yes</svg></td>
+                          <td>Yes</td>
+                          <td>Yes</td>
+                          <td>Yes</td>
                         </tr>
                         <tr>
                           <th scope="row" class="text-start">Sharing</th>
                           <td>-</td>
-                          <td>Yes</svg></td>
-                          <td>Yes</svg></td>
+                          <td>Yes</td>
+                          <td>Yes</td>
                         </tr>
                         <tr>
                           <th scope="row" class="text-start">Unlimited members</th>
                           <td>-</td>
-                          <td>Yes</svg></td>
-                          <td>Yes</svg></td>
+                          <td>Yes</td>
+                          <td>Yes</td>
                         </tr>
                         <tr>
                           <th scope="row" class="text-start">Extra security</th>
                           <td>-</td>
                           <td>-</td>
-                          <td>Yes</svg></td>
+                          <td>Yes</td>
                         </tr>
                       </tbody>
                     </table>

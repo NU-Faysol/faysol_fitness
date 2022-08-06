@@ -1,3 +1,6 @@
+
+            <?php include 'E:\xampp\htdocs\faysol_fitness\components/access.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,22 +14,9 @@
 </head>
 <body class='overflow-x-hidden' style="background-color: #e7f0fd;">
 
-
-        <header class="Container mx-auto">
-            <nav class="Flex justify-between">
-                <div class="logo font-bold Flex items-center text-blue">Faysol Fitness</div>
-                <ul class="navbar Flex items-center">
-                    <li><a class="anchor" href="index.html"> Home </a></li>
-                    <li><a class="anchor" href="about.html"> About </a></li>
-                    <li><a class="anchor" href="services.html"> Services </a></li>
-                    <li><a class="anchor" href="contractUs.html"> Contact Us </a></li>
-                    <li><a class="anchor" href="registration.php"> Registration </a></li>
-                    <li><a class="anchor Btn" href="login.php">Login</a></li>
-                </ul>
-            </nav>
-            <hr>
-        </header>
-
+<div class="Container mx-auto">
+                            <?php include 'E:\xampp\htdocs\faysol_fitness\components/header.php'; ?>
+</div>
         <section class="MY-2 PX-2 cover">
             <img src="./images/sercices_section.jpg" width="99%" height="600px" alt="">
         </section>

@@ -1,19 +1,5 @@
 <?php
 
-// if(isset($_POST['save_btn'])) {
-
-//   $name =  $_POST['name'];
-//   $phone =  $_POST['phone'];
-//   $email = $_POST['email'];
-//   $password = $_POST['password'];
-//   $cpassword = $_POST['cpassword'];
-
-
-//   $query = "INSERT INTO `member`(`id`, `name`, `phone`, `email`, `password`) VALUES ('$name','$phone','$email','$password','$cpassword')";
-
-//   $data = mysqli_query($con,$query);
-// }
-
  include 'connection.php';
 
     $r_username = $_POST['r_username'];
@@ -30,7 +16,7 @@
     $username_pattern = "/^[a-zA-Z]([0-9a-zA-Z .]){3,40}$/";
     $mobile_pattern = "/^([0-9]){11}$/";
     $email_pattern = "/^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/";
-    $pass_pattern = "/^[a-zA-Z0-9!@#$%^&*]{6,16}$/";
+    $pass_pattern = "/^[a-zA-Z0-9!@#$%^&*]{6,30}$/";
 
 
     $duplicate_mobile = mysqli_query($conn, "SELECT * FROM `register` WHERE mobile='$r_mobile'");
