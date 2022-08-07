@@ -8,6 +8,7 @@
                     <li><a class="anchor" href="contractUs.php"> Contact Us </a></li>
                     <li><a class="anchor" href="registration.php"> Registration </a></li>
                     <li><a class="anchor Btn" href="logout.php">Logout</a></li>
+                    <li><a class="anchor" href="view.php">View Data</a></li>
                     
                 </ul>
             </nav>
